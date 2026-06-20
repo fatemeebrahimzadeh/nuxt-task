@@ -1,23 +1,24 @@
-# Nuxt Minimal Starter
+# Nuxt Interview Task
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Frontend interview task built with Nuxt for the Fake Store Products API and the provided Figma design.
+
+## Project Tooling
+
+- Runtime: Node `^22.13.0 || ^24.11.0 || >=26.0.0`
+- Package manager: `pnpm@10.15.1`
+- Linter: Nuxt ESLint flat config
+- Git hooks: Husky
+- Commit messages: Conventional Commits enforced by commitlint
+- Releases: `release-it` with conventional changelog generation
+- ADRs: `docs/adr`
+- Agent guidance: `AGENTS.md` and `codex-skills/front-test-nuxt`
 
 ## Setup
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -25,17 +26,21 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
+```
 
-# yarn
-yarn dev
+## Quality Checks
 
-# bun
-bun run dev
+```bash
+pnpm lint
+pnpm build
+pnpm release:dry
+```
+
+`pnpm release:dry` requires a clean working tree. For config-only validation while changes are still uncommitted:
+
+```bash
+pnpm exec release-it --dry-run --ci --git.requireCleanWorkingDir=false --git.requireUpstream=false
 ```
 
 ## Production
@@ -43,33 +48,11 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

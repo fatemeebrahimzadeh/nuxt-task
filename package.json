@@ -1,17 +1,38 @@
 {
   "name": "nuxt-task",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.15.1",
+  "engines": {
+    "node": "^22.13.0 || ^24.11.0 || >=26.0.0",
+    "pnpm": ">=10.15.1"
+  },
   "scripts": {
     "build": "nuxt build",
+    "commitlint": "commitlint",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky",
     "preview": "nuxt preview",
+    "release": "release-it",
+    "release:dry": "release-it --dry-run --ci",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^4.4.8",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@nuxt/eslint": "^1.16.0",
+    "@release-it/conventional-changelog": "^11.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "release-it": "^20.2.0"
   }
 }
