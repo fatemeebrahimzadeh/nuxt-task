@@ -1,0 +1,4 @@
+interface:
+  display_name: "Front Test Nuxt"
+  short_description: "Nuxt interview task implementation guide"
+  default_prompt: "Use $front-test-nuxt to implement the Fake Store Nuxt interview task."
