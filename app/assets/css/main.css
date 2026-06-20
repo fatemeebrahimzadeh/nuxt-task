@@ -1,15 +1,16 @@
 :root {
   color-scheme: light;
-  --color-page: #f7f3ed;
+  --color-page: #ffffff;
   --color-surface: #ffffff;
-  --color-surface-muted: #f2f5f7;
-  --color-text: #1d252c;
-  --color-text-muted: #64717d;
-  --color-border: #d9e0e6;
-  --color-accent: #0f766e;
-  --color-accent-strong: #115e59;
+  --color-surface-muted: #f6f8fb;
+  --color-text: #06265c;
+  --color-text-muted: #8da2c5;
+  --color-border: #e4eaf2;
+  --color-accent: #06265c;
+  --color-accent-strong: #06265c;
   --color-danger: #b42318;
-  --shadow-card: 0 10px 30px rgb(29 37 44 / 8%);
+  --color-ghost-text: #f3f5f8;
+  --shadow-card: 0 18px 40px rgb(6 38 92 / 8%);
   --radius-card: 8px;
   --space-page-inline: clamp(1rem, 4vw, 4rem);
   font-family:
